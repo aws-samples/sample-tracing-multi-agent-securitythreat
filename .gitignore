@@ -1,0 +1,81 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build.log
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------------------
+# Secrets & local configs (never commit)
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+credentials
+credentials.*
+secrets.*
+secret*.json
+*.tfvars
+.aws/
+
+# ---------------------------------------------------------------------------
+# Blog drafts & office documents (authoring only, not part of the demo)
+# ---------------------------------------------------------------------------
+blog/
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.xlsx
+*.xls
+*.pdf
+
+# ---------------------------------------------------------------------------
+# Screenshots, diagrams, and screen captures
+# ---------------------------------------------------------------------------
+dashboards/Screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.mov
+*.mp4
+Screenshot*
+Screen Recording*
+
+# ---------------------------------------------------------------------------
+# Markdown working docs (keep only the repo README)
+# ---------------------------------------------------------------------------
+*.md
+!README.md
+
+# ---------------------------------------------------------------------------
+# Blog-authoring scripts (depend on local screenshots / reference, not the demo)
+# ---------------------------------------------------------------------------
+scripts/build_blog_docx.py
+scripts/build_arch_diagram.py

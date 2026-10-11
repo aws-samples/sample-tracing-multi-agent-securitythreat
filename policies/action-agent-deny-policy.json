@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyEgressToolsUnlessProvenanceClean",
+      "Effect": "Deny",
+      "Action": [
+        "ses:SendEmail",
+        "ses:SendRawEmail",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:PrincipalTag/provenance-clean": "true"
+        }
+      }
+    }
+  ]
+}

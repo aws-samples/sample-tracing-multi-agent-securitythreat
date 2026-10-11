@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ticket-4410",
+    "subject": "Refund request for duplicate charge",
+    "body": "Hi, I was charged twice for order CUST-100002. Could you please issue a refund of $49.99? Thanks."
+  },
+  {
+    "id": "ticket-4411",
+    "subject": "Password reset help",
+    "body": "I can't log in to my account and the reset link is not arriving. Can you help me regain access?"
+  }
+]

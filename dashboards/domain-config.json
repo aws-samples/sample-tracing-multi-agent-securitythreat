@@ -1,0 +1,30 @@
+{
+  "DomainName": "agent-sec-traces",
+  "EngineVersion": "OpenSearch_2.19",
+  "ClusterConfig": {
+    "InstanceType": "t3.small.search",
+    "InstanceCount": 1,
+    "DedicatedMasterEnabled": false,
+    "ZoneAwarenessEnabled": false
+  },
+  "EBSOptions": {
+    "EBSEnabled": true,
+    "VolumeType": "gp3",
+    "VolumeSize": 10
+  },
+  "AccessPolicies": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"es:*\",\"Resource\":\"arn:aws:es:<REGION>:<ACCOUNT_ID>:domain/agent-sec-traces/*\"}]}",
+  "NodeToNodeEncryptionOptions": { "Enabled": true },
+  "EncryptionAtRestOptions": { "Enabled": true },
+  "DomainEndpointOptions": {
+    "EnforceHTTPS": true,
+    "TLSSecurityPolicy": "Policy-Min-TLS-1-2-2019-07"
+  },
+  "AdvancedSecurityOptions": {
+    "Enabled": true,
+    "InternalUserDatabaseEnabled": false,
+    "MasterUserOptions": {
+      "MasterUserARN": "<MASTER_USER_ROLE_ARN>"
+    }
+  },
+  "SoftwareUpdateOptions": { "AutoSoftwareUpdateEnabled": false }
+}
